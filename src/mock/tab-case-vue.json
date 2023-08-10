@@ -1,0 +1,454 @@
+{
+  "id": "123",
+  "schemaType": "page",
+  "name": "testPage",
+  "desc": "测试页面",
+  "props": {
+    "c2": {
+      "columns":  {
+        "id": "columns",
+        "schemaType": "props",
+        "name": "columns",
+        "category": "basic",
+        "valueType": "array",
+        "valueSource": "editorInput",
+        "templateKeyPathsReg": [{
+          "path": "\\[\\d+\\]\\.render",
+          "type": "function"
+        }],
+        "value": [
+          {
+            "title": "Name",
+            "dataIndex": "name",
+            "key": "name",
+            "render": {
+              "id": "c13",
+              "schemaType": "component",
+              "name": "a",
+              "children": ["text"]
+            }
+          },
+          {
+            "title": "Age",
+            "dataIndex": "age",
+            "key": "age"
+          },
+          {
+            "title": "Action",
+            "key": "action",
+            "render": {
+              "id": "c14",
+              "schemaType": "component",
+              "dependency": "ant-design-vue",
+              "name": "Space",
+              "propsRefs": ["size"],
+              "children": [
+                {
+                  "id": "c15",
+                  "schemaType": "component",
+                  "name": "a",
+                  "children": ["Invite Lida"]
+                },
+                {
+                  "id": "c16",
+                  "schemaType": "component",
+                  "name": "a",
+                  "children": ["Delete"]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dataSource": {
+        "id": "dataSource",
+        "schemaType": "props",
+        "name": "dataSource",
+        "category": "basic",
+        "valueType": "array",
+        "valueSource": "editorInput",
+        "value": [
+          {
+            "key": "1",
+            "firstName": "John",
+            "lastName": "Brown",
+            "age": 32,
+            "address": "New York No. 1 Lake Park",
+            "tags": ["nice", "developer"]
+          },
+          {
+            "key": "2",
+            "name": "Jim",
+            "lastName": "Green",
+            "age": 42,
+            "address": "London No. 1 Lake Park",
+            "tags": ["loser"]
+          },
+          {
+            "key": "3",
+            "name": "Joe",
+            "lastName": "Black",
+            "age": 32,
+            "address": "Sydney No. 1 Lake Park",
+            "tags": ["cool", "teacher"]
+          }
+        ]
+      }
+    },
+    "c5": {
+      "value": {
+        "id": "value",
+        "schemaType": "props",
+        "name": "value",
+        "category": "basic",
+        "value": "1",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      },
+      "onSearch": {
+        "name": "onSearch",
+        "category": "event",
+        "value": "h1",
+        "valueType": "handler",
+        "valueSource": "editorInput"
+      }
+    },
+    "c6": {
+      "value": {
+        "name": "value",
+        "category": "basic",
+        "value": "2",
+        "valueType": "string",
+        "valueSource": "userInput",
+        "isValue": true
+      },
+      "options": {
+        "name": "options",
+        "category": "basic",
+        "value": [
+          {
+            "value": 1,
+            "label": "选项1"
+          },
+          {
+            "value": "2",
+            "label": "选项2"
+          }
+        ],
+        "valueType": "array",
+        "valueSource": "editorInput"
+      }
+    },
+    "c7": {
+      "items": {
+        "id": "items",
+        "schemaType": "props",
+        "name": "items",
+        "category": "basic",
+        "valueType": "object",
+        "valueSource": "editorInput",
+        "templateKeyPathsReg": [
+          {
+            "type": "object",
+            "path":  "\\[0\\]\\.children"
+          },
+          {
+            "type": "object",
+            "path":  "\\[1\\]\\.children"
+          }
+        ]
+      }
+    },
+    "c8": {
+      "title": {
+        "id": "title",
+        "schemaType": "props",
+        "name": "title",
+        "category": "basic",
+        "valueType": "string",
+        "valueSource": "editorInput",
+        "value": "测试按钮1"
+      }
+    },
+    "c9": {
+      "title": {
+        "id": "title",
+        "schemaType": "props",
+        "name": "title",
+        "category": "basic",
+        "valueType": "string",
+        "valueSource": "editorInput",
+        "value": "测试按钮2"
+      }
+    },
+    "c10": {
+      "key": {
+        "schemaType": "props",
+        "name": "key",
+        "category": "basic",
+        "value": "1",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      },
+      "tab": {
+        "schemaType": "props",
+        "name": "tab",
+        "category": "basic",
+        "value": "Tab 1",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      }
+    },
+    "c11": {
+      "key": {
+        "schemaType": "props",
+        "name": "key",
+        "category": "basic",
+        "value": "2",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      },
+      "tab": {
+        "schemaType": "props",
+        "name": "tab",
+        "category": "basic",
+        "value": "Tab 2",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      }
+    },
+    "c14": {
+      "key": {
+        "schemaType": "props",
+        "name": "key",
+        "category": "basic",
+        "value": "测试 Tab 1",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      },
+      "tab": {
+        "schemaType": "props",
+        "name": "tab",
+        "category": "basic",
+        "value": "测试 Tab 1",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      }
+    },
+    "c15": {
+      "key": {
+        "schemaType": "props",
+        "name": "key",
+        "category": "basic",
+        "value": "测试 Tab 2",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      },
+      "tab": {
+        "schemaType": "props",
+        "name": "tab",
+        "category": "basic",
+        "value": "测试 Tab 2",
+        "valueType": "string",
+        "valueSource": "editorInput"
+      }
+    }
+  },
+  "child": {
+    "id": "c0",
+    "schemaType": "component",
+    "name": "div",
+    "children": [
+      {
+        "id": "c4",
+        "schemaType": "component",
+        "name": "div",
+        "children": [
+          {
+            "id": "c5",
+            "schemaType": "component",
+            "callingName": "Input.Search",
+            "dependency": "ant-design-vue",
+            "name": "Input",
+            "propsRefs": [
+              "value"
+            ]
+          },
+          {
+            "id": "c6",
+            "schemaType": "component",
+            "dependency": "ant-design-vue",
+            "name": "Select",
+            "propsRefs": [
+              "value",
+              "options"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c1",
+        "schemaType": "component",
+        "dependency": "ant-design-vue",
+        "name": "Tabs",
+        "children": [
+          {
+            "id": "c10",
+            "schemaType": "component",
+            "dependency": "ant-design-vue",
+            "name": "TabPane",
+            "propsRefs": [
+              "key",
+              "tab"
+            ],
+            "children": [
+              {
+                "id": "c13",
+                "schemaType": "component",
+                "dependency": "ant-design-vue",
+                "name": "Tabs",
+                "propsRefs": [
+                  "key",
+                  "tab"
+                ],
+                "children": [
+                  {
+                    "id": "c14",
+                    "schemaType": "component",
+                    "dependency": "ant-design-vue",
+                    "name": "TabPane",
+                    "propsRefs": [
+                      "key",
+                      "tab"
+                    ],
+                    "children": [
+                      {
+                        "id": "c2",
+                        "schemaType": "component",
+                        "dependency": "ant-design-vue",
+                        "name": "Table",
+                        "propsRefs": [
+                          "columns",
+                          "dataSource"
+                        ]
+                      },
+                      {
+                        "id": "c9",
+                        "schemaType": "component",
+                        "dependency": "ant-design-vue",
+                        "name": "Button",
+                        "children": [
+                          "测试按钮2"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "c15",
+                    "schemaType": "component",
+                    "dependency": "ant-design-vue",
+                    "name": "TabPane",
+                    "propsRefs": [
+                      "key",
+                      "tab"
+                    ],
+                    "children": [
+                      {
+                        "id": "c3",
+                        "dependency": "ant-design-vue",
+                        "name": "Table",
+                        "propsRefs": [
+                          "p4",
+                          "p5",
+                          "p6"
+                        ]
+                      },
+                      {
+                        "id": "c10",
+                        "schemaType": "component",
+                        "dependency": "ant-design-vue",
+                        "name": "Button",
+                        "children": [
+                          "测试按钮3"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "c11",
+                "schemaType": "component",
+                "dependency": "ant-design-vue",
+                "name": "TabPane"
+              }
+            ]
+          },
+          {
+            "id": "c11",
+            "schemaType": "component",
+            "dependency": "ant-design-vue",
+            "name": "TabPane",
+            "propsRefs": [
+              "key",
+              "tab"
+            ],
+            "children": [
+              {
+                "id": "c10",
+                "schemaType": "component",
+                "dependency": "ant-design-vue",
+                "name": "Button",
+                "children": [
+                  "测试按钮3"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "storage": {
+    "inputSearchValue1": "测试"
+  },
+  "query": {
+    "selectValue1": "1"
+  },
+  "events": {
+    "loaded": "h1"
+  },
+  "httpService": {
+    "s1": {
+      "url": "http://localhost",
+      "method": "GET"
+    }
+  },
+  "handlers": {
+    "h1": {
+      "name": "searchData",
+      "desc": "搜索数据",
+      "actionRefs": [
+        "a1"
+      ]
+    }
+  },
+  "actions": {
+    "a1": {
+      "type": "service",
+      "payload": {
+        "method": "GET",
+        "params": {
+          "keyword": "inputSearchValue1",
+          "type": "selectValue1"
+        }
+      }
+    },
+    "a2": {
+      "type": "dataConversion",
+      "payload": {
+        "dataName": "tableValue1"
+      }
+    }
+  }
+}
